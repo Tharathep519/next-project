@@ -10,17 +10,14 @@ export default function Home() {
     router.push(`/admin?user=${username}&pass=${password}`);
   };
 
-  console.log("[Debug] user", username); //ดีบัคยูสเซอร์
-  console.log("[Debug] pass", password); //ดีบัคพาสเวิร์ส
-
   return (
     <div className="grid   place-content-center h-full my-[20%] ">
-      <img
+      <Image 
         className="mx-auto mb-[20px] rounded-full "
         src="https://dynamic.brandcrowd.com/asset/logo/937e0eec-eebf-4294-9029-41619d6c3786/logo-search-grid-1x?logoTemplateVersion=1&v=638369310055500000"
         alt="logo"
-        width="150px"
-        height="150px"
+        width={150}
+        height={150}
       />
       <div className="block">
         <input
