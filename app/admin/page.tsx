@@ -1,15 +1,15 @@
 "use client";
-import { useSearchParams } from "next/navigation";
+import { useRouter } from 'next/router';
+
 export default function AdminPage() {
-  const searchparams = useSearchParams();
-  const u = searchparams.get("user");
-  const p = searchparams.get("pass");
+  const router = useRouter();
+  const { user, pass } = router.query;
 
   return (
     <div>
-      <h1>admin</h1>
-      <p>{u}</p>
-      <p>{p}</p>
+      <h1>Admin</h1>
+      <p>User: {user}</p>
+      <p>Password: {pass}</p>
     </div>
   );
 }
